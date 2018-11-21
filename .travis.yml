@@ -9,4 +9,4 @@ cache:
 
 install: true
 script:
-  - sudo ./gradlew clean install
+  - ./gradlew clean install
