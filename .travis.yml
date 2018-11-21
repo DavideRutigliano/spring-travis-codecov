@@ -13,5 +13,7 @@ install: true
 script:
   - ./gradlew build check
   
-after_success:
-  - bash <(curl -s https://codecov.io/bash) -t 01570e5d-c6fc-4737-b7cd-0c6c5cbe2178
+test:
+    post:
+        - if [ -e ./gradlew ]; then ./gradlew jacocoTestReport;else gradle jacocoTestReport;fi
+        - bash <(curl -s https://codecov.io/bash) -t 01570e5d-c6fc-4737-b7cd-0c6c5cbe2178
