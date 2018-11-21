@@ -1,4 +1,5 @@
 language: java
+
 jdk:
  - oraclejdk8
 
@@ -8,4 +9,4 @@ cache:
 
 install: true
 script:
-  - ./gradlew clean install
+  - sudo ./gradlew clean install
