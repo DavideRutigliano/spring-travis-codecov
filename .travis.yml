@@ -13,4 +13,6 @@ before_install:
 install: true
 script:
   - ./gradlew clean install
-  - bash <(curl -s https://codecov.io/bash)
+  
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t 01570e5d-c6fc-4737-b7cd-0c6c5cbe2178
